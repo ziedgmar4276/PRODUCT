@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PRODUCT.Views.ProductsDetailPage">
+    <TableView Intent="Form" Margin="16,0">
+        <TableRoot>
+
+            <TableSection >
+                <EntryCell Label="Prodduct Name" Text="{Binding Path=product.Product_Name}" />
+            </TableSection>
+
+            <TableSection >
+                <EntryCell Label="Product Description" Text="{Binding Path=product.Product_Description}" />
+            </TableSection>
+            <TableSection >
+                <EntryCell Label="Product Prix" Text="{Binding Path=product.Prix}" />
+            </TableSection>
+            <TableSection>
+                <ViewCell>
+                    <Button Text="Save" Command="{Binding SaveCommand}" />
+                </ViewCell>
+            </TableSection>
+
+        </TableRoot>
+    </TableView>
+</ContentPage>
